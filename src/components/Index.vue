@@ -3,7 +3,7 @@
         <header class="header">
             <slot>
                 <nav class="navbar navbar-expand-lg py-3">
-                    <a class="navbar-brand brand-logo" href="#"><img src="../assets/images/oak-express.png" alt=""></a>
+                    <a class="navbar-brand brand-logo" href="/"><img src="../assets/images/oak-express.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -39,7 +39,7 @@
                         <div class="inline justify-content-center">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Sign in<span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="/register/">Sign in<span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link btn btn-success btn-lg text-white" href="#">Create Account <span class="sr-only">(current)</span></a>
@@ -240,9 +240,12 @@ import bg from '../assets/images/register-bg.jpg';
 import property1 from '../assets/images/property-1.jpg';
 import property2 from '../assets/images/property-2.jpg';
 import property3 from '../assets/images/property-3.jpg';
+const Home = { template: '<p>home page</p>' }
+const About = { template: '<p>about page</p>' }
 export default {
     data() {
         return {
+            currentRoute: window.location.pathname,
             bg,
             property1,
             property2,

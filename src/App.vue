@@ -1,32 +1,14 @@
 <template>
   <div id="app">
-    <Index />
+    
+    <router-view/>
   </div>
 </template>
 
-<script>
-//import HelloWorld from './components/HelloWorld.vue';
-//import Register from './components/Register';
-import Index from './components/Index';
-
-
-export default {
-  name: 'App',
-  components: {
-    //HelloWorld,
-    //Register,
-    Index,
-  }
-}
-</script>
-
 <style lang="scss">
-
-$black: rgb(65, 76, 83);
-$white: rgb(255,255,255);
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 
 /* Track */
@@ -36,20 +18,53 @@ $white: rgb(255,255,255);
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(65, 76, 83);
+  background: rgb(189,139,40);;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(65, 76, 83);
+  background: #555;
 }
 
+
+$brown: rgb(189,139,40);
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Dosis, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin: 0;
-  padding: 0;
 }
+
+.nav-item {
+  //padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: $brown;
+    }
+  }
+}
+
+.body {
+    margin-top: 7rem;
+}
+
+.button {
+  border-image-repeat: stretch;
+  border-radius: 4.8px;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+
+.button-brown {
+  background: $brown;
+  border: 1px solid $brown;
+  color: $brown;
+}
+
+
 </style>
